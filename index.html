@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #00d4ff;
+            --muted: #9aa4b2;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: #e6eef6;
+            margin: 0;
+            line-height: 1.5
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 28px 36px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent)
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: var(--accent)
+        }
+
+        .header-left h2 {
+            margin: 4px 0 0;
+            font-weight: 450;
+            color: var(--muted)
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 16px
+        }
+
+        .header-right{display:flex;align-items:center;gap:18px}
+        .header-right nav{order:1}
+        .header-right .profile-picture{order:2}
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: background .18s, color .18s
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--accent)
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+            transition: transform .35s ease, box-shadow .35s ease;
+            animation: float 6s ease-in-out infinite
+        }
+
+        .profile-picture img:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5)
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-8px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        /* Page content separation */
+        header{border-bottom:1px solid rgba(255,255,255,0.03);padding-bottom:22px}
+
+        main {
+            max-width: 960px;
+            margin: 28px auto;
+            padding: 28px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+        }
+
+        main h2 {
+            color: var(--accent);
+            margin-top: 0
+        }
+
+        main p {
+            color: #cbd6e5;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            margin: 12px 0 0;
+        }
+
+        /* Call-to-action button in main */
+        .cta{margin-top:18px}
+        .hire-btn{display:inline-block;padding:10px 18px;background:linear-gradient(90deg,var(--accent),#7ef6ff);color:#041025;font-weight:600;border-radius:10px;text-decoration:none;box-shadow:0 8px 20px rgba(0,212,255,0.08);transition:transform .18s,box-shadow .18s}
+        .hire-btn:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,212,255,0.12)}
+        @media (max-width:720px){.cta{width:100%;display:flex;justify-content:center}.hire-btn{padding:10px 14px}}
+
+        footer {
+            margin-top: 28px;
+            padding: 18px 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: .95rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            background: transparent;
+        }
+
+        /* Reveal animation used by the script */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .visible {
+            opacity: 1;
+            transform: none
+        }
+
+        /* Typewriter caret removed */
+        header h1::after { display: none }
+
+        /* Responsive */
+        @media (max-width:720px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .header-right{width:100%;display:flex;justify-content:space-between;align-items:center}
+
+            .profile-picture{margin-top:0}
+
+            nav ul{flex-wrap:wrap;gap:12px}
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1> Hello! I am Angad Sharma </h1>
+            <h2>Full-stack Web Developer</h2>
+        </div>
+
+        <div class="header-right">
+            <nav>
+                <ul>
+
+                    <li><a href="projects.html" target="_blank"> My Projects</a></li>
+                    <li><a href="contacts.html" target="_blank">Contacts</a></li>
+                    <li><a href="resume.html" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="profile-picture">
+                <img src="profilepic.png.JPG" alt="" width="150" height="150">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-left">
+            <h2>About Me</h2>
+        </div>
+        <p>Welcome to my portfolio!
+            I am a full-stack web developer with experience in creating dynamic and responsive websites.
+            I am currently pursuing my degree in computer science in specialization of
+            Artificial Intelligence and Machine Learning. I have a strong foundation in programming languages such as
+            c programming, Python, Java, and JavaScript. Feel free to explore and contact me if you have any questions
+            or opportunities.</p>
+
+        <div class="cta">
+            <a class="hire-btn"  target="_blank" href="contacts.html">Hire Me</a>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
